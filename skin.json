@@ -21,8 +21,8 @@
   "accent": "#c9a227",
   "order": 104,
   "preview": {
-    "light": "preview/light.png",
-    "dark": "preview/dark.png"
+    "light": "light.png",
+    "dark": "dark.png"
   },
   "contributes": {
     "stylesheet": "skin.css",
