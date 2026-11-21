@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.linxin666.org/dsh-skin/v2.json",
+  "skinManifestVersion": 2,
+  "id": "gilded-sidebar",
+  "name": "鎏金侧栏",
+  "nameEn": "Gilded Sidebar",
+  "version": "1.0.0",
+  "author": "jyz48prsbr-netizen",
+  "license": "MIT",
+  "licenseUrl": "https://opensource.org/licenses/MIT",
+  "tagline": "黑金品牌标识 + 左侧栏全部文字金色",
+  "description": "基于 silicon-sbt 的 black-gold-vip（MIT）二次修改：保留左上角金属金品牌卡，并额外把左侧栏全部文字（导航项、工作区标题、会话列表、用量等）染成金属金。双主题自适应，纯 CSS。",
+  "tags": [
+    "black",
+    "gold",
+    "brand",
+    "sidebar",
+    "text",
+    "css-only"
+  ],
+  "accent": "#c9a227",
+  "order": 104,
+  "preview": {
+    "light": "preview/light.png",
+    "dark": "preview/dark.png"
+  },
+  "contributes": {
+    "stylesheet": "skin.css",
+    "patches": "patches.css"
+  }
+}
