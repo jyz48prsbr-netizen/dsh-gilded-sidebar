@@ -1,0 +1,5 @@
+# dsh-gilded-sidebar bundle patch — merged by `dsh plugin add`.
+# Contributes one host row for the Gilded Sidebar skin.
+- insert:
+    - id: gilded-sidebar
+      name: dsh-gilded-sidebar
