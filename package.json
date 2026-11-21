@@ -1,0 +1,19 @@
+{
+  "name": "dsh-gilded-sidebar",
+  "version": "1.0.0",
+  "description": "Gilded Sidebar (鎏金侧栏) — a black-gold DeepSeek Harness skin with metallic gold sidebar text. Derived from black-gold-vip (MIT).",
+  "license": "MIT",
+  "author": "jyz48prsbr-netizen",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "theme",
+    "skin"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
