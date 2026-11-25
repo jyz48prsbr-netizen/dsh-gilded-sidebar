@@ -233,3 +233,35 @@ body[data-ds-dark-theme] {
 [data-slot="sidebar"] svg * {
   stroke-width: 2.4 !important;
 }
+
+/* ============================================================
+ * 追加 3：刷新按钮与品牌金卡分离
+ * dsh-sidebar-refresh 把刷新按钮插进 brandIdentity（金卡）内部，
+ * 于是按钮和鲸鱼图标被同一张金框包在一起。这里让按钮脱离文档流、
+ * 定位到金卡外侧，金卡收缩为只包品牌本身，两者视觉上彻底分开。
+ * ============================================================ */
+
+/* 金卡允许子元素溢出到卡外，按钮才能显示在金框之外 */
+[class*="brandIdentity"] {
+  overflow: visible;
+}
+/* overflow 改为 visible 后，扫光会溢出卡面；装了刷新按钮时关掉扫光动画 */
+[data-dsh-surface="sidebar"]:has(#dsh-sidebar-refresh-btn) [class*="brandIdentity"]::before,
+[data-slot="sidebar"]:has(#dsh-sidebar-refresh-btn) [class*="brandIdentity"]::before {
+  animation: none;
+  opacity: 0;
+}
+
+/* 刷新按钮：绝对定位到金卡右侧之外，成为独立控件，与品牌彻底分开 */
+#dsh-sidebar-refresh-btn {
+  position: absolute !important;
+  left: calc(100% + 10px) !important;
+  top: 50% !important;
+  margin: 0 !important;
+  transform: translateY(-50%) !important;
+  z-index: 6 !important;
+}
+#dsh-sidebar-refresh-btn:hover,
+#dsh-sidebar-refresh-btn:active {
+  transform: translateY(-50%) rotate(35deg) !important;
+}
